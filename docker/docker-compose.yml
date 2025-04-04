@@ -1,0 +1,23 @@
+version: '3.7'
+
+services:
+  n8n:
+    image: n8nio/n8n
+    container_name: n8n_rag_project
+    ports:
+      - "5678:5678"
+    environment:
+      - N8N_BASIC_AUTH_ACTIVE=true
+      - N8N_BASIC_AUTH_USER=admin
+      - N8N_BASIC_AUTH_PASSWORD=admin
+      - N8N_HOST=localhost
+      - N8N_PORT=5678
+      - GENERIC_TIMEZONE=Europe/Paris
+      - ELASTICSEARCH_URL=http://host.docker.internal:9200
+      - KIBANA_URL=http://host.docker.internal:5601
+    volumes:
+      - n8n_data:/home/node/.n8n
+      - /root/rag-analytics-project/outputs:/data/csvs
+
+volumes:
+  n8n_data:
