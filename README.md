@@ -86,7 +86,7 @@ pip install -r requirements.txt
 
 ---
 
-## 🔁 Ingestion des données dans Elasticsearch
+## Ingestion des données dans Elasticsearch
 
 ```bash
 python scripts/ingest_to_es.py
@@ -96,7 +96,7 @@ python scripts/ingest_to_es.py
 
 ---
 
-## 🚀 Lancer l’application Flask
+## Lancer l’application Flask
 
 ```bash
 python app/app.py
@@ -110,9 +110,9 @@ Accès via [http://localhost:5000](http://localhost:5000)
 
 Pose des questions comme :
 
-- **"Qui sont les clients qui achètent le plus de vélos en carbone ?"**
+- **"Qui sont les clients qui achètent le plus de vélos ?"**
 - **"Commandes en 2012 ?"**
-- **"Produits de type route et cadre aluminium ?"**
+- **"Produits le plus vendus ?"**
 
 L'application utilise une **analyse de mots-clés** + `multi_match` Elasticsearch pour répondre.
 
@@ -129,9 +129,7 @@ Tu peux explorer les index (`orders`, `customers`, etc.) et créer des visualisa
 
 Connecte `n8n` à ta base Elasticsearch pour automatiser :
 - ingestion régulière
-- envoi de données à une API
-- alertes par email
-
+- transformation des csv en json.
 
 
 ---
