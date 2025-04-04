@@ -1,0 +1,33 @@
+# Fichiers Python
+*.pyc
+__pycache__/
+.env
+.env.*
+
+# Jupyter notebooks cachés
+.ipynb_checkpoints/
+
+# Dossiers temporaires
+tmp/
+temp/
+*.log
+
+# Fichiers de données volumineux
+*.csv
+*.xlsx
+*.json
+*.parquet
+
+# Dossiers virtuels
+env/
+.venv/
+
+# Fichiers systèmes
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# n8n
+/home/node/.n8n
